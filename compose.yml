@@ -5,6 +5,8 @@ services:
     image: dziecko500plus/forecast:latest
     container_name: forecast
     restart: unless-stopped
+    env_file:
+      - .env
 
   watchtower:
     image: containrrr/watchtower
